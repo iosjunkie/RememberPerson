@@ -11,6 +11,7 @@ import SwiftUI
 struct Person: Identifiable, Comparable, Codable {
     let id: UUID
     let name: String
+    let location: String
 //    let image: UIImage
 //    let wrappedImage: Image
     var imageIdentifier: String
@@ -83,6 +84,18 @@ struct Person: Identifiable, Comparable, Codable {
             completion()
         } catch {
             print("Unable to delete data")
+        }
+    }
+    
+    static func deleteAll() {
+        let people = [Person]()
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        do {
+            let filename = paths[0].appendingPathComponent("SavedPeople")
+            let data = try JSONEncoder().encode(people)
+            try data.write(to: filename, options: [.atomicWrite, .completeFileProtection])
+        } catch {
+            print("Unable to delete all")
         }
     }
     

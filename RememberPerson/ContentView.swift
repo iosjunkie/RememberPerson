@@ -25,14 +25,25 @@ struct ContentView: View {
                             .frame(width: 44, height: 44)
                             .padding(.trailing)
                         }
-                        Text(person.name)
+                        VStack(alignment: .leading) {
+                            Text(person.name)
+                                .font(.headline)
+                            Text(person.location)
+                                .font(.subheadline)
+                        }
+                        
                     })
                 }
                 .onDelete(perform: self.deleteItem)
             }
             .onAppear(perform: loadPeople)
             .navigationBarTitle("People To Remember")
-            .navigationBarItems(trailing: NavigationLink(destination: AddPersonView()) {
+            .navigationBarItems(leading: Button(action: {
+                Person.deleteAll()
+                self.loadPeople()
+            }) {
+                Text("Delete All")
+                }, trailing: NavigationLink(destination: AddPersonView()) {
                 Image(systemName: "plus")
             })
         }

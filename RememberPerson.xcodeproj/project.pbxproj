@@ -17,6 +17,7 @@
 		E2335D1C23D25A9000B4672C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2335D1B23D25A9000B4672C /* Person.swift */; };
 		E246D78923D2C9D1009E31F2 /* AddPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246D78823D2C9D1009E31F2 /* AddPersonView.swift */; };
 		E246D78B23D2C9E0009E31F2 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246D78A23D2C9E0009E31F2 /* DetailView.swift */; };
+		E26DB93B23D6DBA10074023A /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26DB93A23D6DBA10074023A /* LocationFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E2335D1B23D25A9000B4672C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		E246D78823D2C9D1009E31F2 /* AddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonView.swift; sourceTree = "<group>"; };
 		E246D78A23D2C9E0009E31F2 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		E26DB93A23D6DBA10074023A /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				E2335D1B23D25A9000B4672C /* Person.swift */,
 				E246D78823D2C9D1009E31F2 /* AddPersonView.swift */,
 				E246D78A23D2C9E0009E31F2 /* DetailView.swift */,
+				E26DB93A23D6DBA10074023A /* LocationFetcher.swift */,
 			);
 			path = RememberPerson;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			files = (
 				E2335D1C23D25A9000B4672C /* Person.swift in Sources */,
 				E2335D0623D257FF00B4672C /* AppDelegate.swift in Sources */,
+				E26DB93B23D6DBA10074023A /* LocationFetcher.swift in Sources */,
 				E2335D1A23D258D600B4672C /* ImagePicker.swift in Sources */,
 				E246D78B23D2C9E0009E31F2 /* DetailView.swift in Sources */,
 				E2335D0823D257FF00B4672C /* SceneDelegate.swift in Sources */,

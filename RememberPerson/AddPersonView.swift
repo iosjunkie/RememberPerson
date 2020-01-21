@@ -15,8 +15,12 @@ struct AddPersonView: View {
     @State private var inputImage: UIImage?
     @State private var image: Image?
     @State private var name: String = ""
+    
+    let locationFetcher = LocationFetcher()
+    
     var body: some View {
-        VStack {
+        self.locationFetcher.start()
+        return VStack {
             ZStack {
                 Rectangle()
                     .fill(Color.secondary)
@@ -57,7 +61,9 @@ struct AddPersonView: View {
     
     func save() {
         Person.saveImage(image: inputImage!)
-        Person.savePerson(person: Person(id: UUID(), name: name, imageIdentifier: "\(inputImage!.accessibilityIdentifier ?? Date().description).jpg"))
+        if let location = self.locationFetcher.lastKnownLocation {
+            Person.savePerson(person: Person(id: UUID(), name: name, location: "\(location)", imageIdentifier: "\(inputImage!.accessibilityIdentifier ?? Date().description).jpg"))
+        }
         presentationMode.wrappedValue.dismiss()
     }
 }
