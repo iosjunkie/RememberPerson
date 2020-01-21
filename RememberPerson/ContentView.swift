@@ -9,8 +9,45 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var people = [Person]()
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            List {
+                ForEach(people, id: \.id) { (person) in
+                    NavigationLink(destination: DetailView(person: person), label: {
+                        if person.imageIdentifier.contains("bytes") {
+                            Image(systemName: "person")
+                        } else {
+                            Person.retrieveImage(imageIdentifier: person.imageIdentifier)?
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 44, height: 44)
+                            .padding(.trailing)
+                        }
+                        Text(person.name)
+                    })
+                }
+                .onDelete(perform: self.deleteItem)
+            }
+            .onAppear(perform: loadPeople)
+            .navigationBarTitle("People To Remember")
+            .navigationBarItems(trailing: NavigationLink(destination: AddPersonView()) {
+                Image(systemName: "plus")
+            })
+        }
+    }
+    
+    func loadPeople() {
+        people = Person.fetchPeople()
+    }
+    
+    private func deleteItem(at indexSet: IndexSet) {
+        let index = indexSet.first!
+        Person.deletePerson(people: people, person: people[index]) {
+            self.people.remove(atOffsets: indexSet)
+            loadPeople()
+        }
     }
 }
 

@@ -13,6 +13,10 @@
 		E2335D0C23D2580100B4672C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2335D0B23D2580100B4672C /* Assets.xcassets */; };
 		E2335D0F23D2580100B4672C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2335D0E23D2580100B4672C /* Preview Assets.xcassets */; };
 		E2335D1223D2580100B4672C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2335D1023D2580100B4672C /* LaunchScreen.storyboard */; };
+		E2335D1A23D258D600B4672C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2335D1923D258D600B4672C /* ImagePicker.swift */; };
+		E2335D1C23D25A9000B4672C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2335D1B23D25A9000B4672C /* Person.swift */; };
+		E246D78923D2C9D1009E31F2 /* AddPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246D78823D2C9D1009E31F2 /* AddPersonView.swift */; };
+		E246D78B23D2C9E0009E31F2 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E246D78A23D2C9E0009E31F2 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		E2335D0E23D2580100B4672C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E2335D1123D2580100B4672C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2335D1323D2580100B4672C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2335D1923D258D600B4672C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E2335D1B23D25A9000B4672C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E246D78823D2C9D1009E31F2 /* AddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonView.swift; sourceTree = "<group>"; };
+		E246D78A23D2C9E0009E31F2 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +68,13 @@
 				E2335D0723D257FF00B4672C /* SceneDelegate.swift */,
 				E2335D0923D257FF00B4672C /* ContentView.swift */,
 				E2335D0B23D2580100B4672C /* Assets.xcassets */,
+				E2335D1923D258D600B4672C /* ImagePicker.swift */,
 				E2335D1023D2580100B4672C /* LaunchScreen.storyboard */,
 				E2335D1323D2580100B4672C /* Info.plist */,
 				E2335D0D23D2580100B4672C /* Preview Content */,
+				E2335D1B23D25A9000B4672C /* Person.swift */,
+				E246D78823D2C9D1009E31F2 /* AddPersonView.swift */,
+				E246D78A23D2C9E0009E31F2 /* DetailView.swift */,
 			);
 			path = RememberPerson;
 			sourceTree = "<group>";
@@ -146,9 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2335D1C23D25A9000B4672C /* Person.swift in Sources */,
 				E2335D0623D257FF00B4672C /* AppDelegate.swift in Sources */,
+				E2335D1A23D258D600B4672C /* ImagePicker.swift in Sources */,
+				E246D78B23D2C9E0009E31F2 /* DetailView.swift in Sources */,
 				E2335D0823D257FF00B4672C /* SceneDelegate.swift in Sources */,
 				E2335D0A23D257FF00B4672C /* ContentView.swift in Sources */,
+				E246D78923D2C9D1009E31F2 /* AddPersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
